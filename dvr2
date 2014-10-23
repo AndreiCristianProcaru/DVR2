@@ -1,0 +1,55 @@
+<p>Devoir 2 , validator de expresii :-) si :-( </p>
+
+<button onclick="myFunction()">Check expr</button>
+
+<!-paragraful cu valoarea noastra->
+<p id="dvr1">mere = 12 :-)</p> <!- ok ->
+<p id="dvr2">fragi = 18 + 9 :-)</p> <!- ok ->
+<p id="dvr3">banane = 547 * 12 :-)</p> <!- ok ->
+<p id="dvr4">coconut = 778994 - 98745 :-)</p> <!- ok ->
+<p id="dvr5">dude = 123 + 1334 </p> <!- not ok ->
+
+<script>
+function myFunction() {
+    // poli compara valoarea paragrafului cu expresia noastra
+   var poli1 = document.getElementById("dvr1").innerHTML; 
+	 var poli2 = document.getElementById("dvr2").innerHTML;
+	 var poli3 = document.getElementById("dvr3").innerHTML;
+	 var poli4 = document.getElementById("dvr4").innerHTML;
+	 var poli5 = document.getElementById("dvr5").innerHTML;
+	
+    //verificam val lui str cu expresia reg , dak e ok ne afis ca merge , ivers ..nu merge
+    if (/(([a-z,A-Z]{4})\s=\s[0-9]+\s[:][-][)]+)|(([a-z,A-Z]{4})+\s=\s[0-9]+\s[+]\s[0-9]+\s[:][-][)]+)|(([a-z,A-Z]{4})\s=\s[0-9]+\s[*]\s[0-9]+\s[:][-][)]+)|(([a-z,A-Z]{4})+\s=\s[0-9]+\s[-]\s[0-9]+\s[:][-][)]+)/i.test(poli1)) 
+        {
+		document.getElementById("dvr1").innerHTML = ":-)";
+		}
+   else 
+         {     document.getElementById("dvr1").innerHTML = ":-(";}
+    if (/(([a-z,A-Z]{4})\s=\s[0-9]+\s[:][-][)]+)|(([a-z,A-Z]{4})+\s=\s[0-9]+\s[+]\s[0-9]+\s[:][-][)]+)|(([a-z,A-Z]{4})\s=\s[0-9]+\s[*]\s[0-9]+\s[:][-][)]+)|(([a-z,A-Z]{4})+\s=\s[0-9]+\s[-]\s[0-9]+\s[:][-][)]+)/i.test(poli2)) 
+        {
+            document.getElementById("dvr2").innerHTML = ":-)";}
+   else 
+         {     document.getElementById("dvr2").innerHTML = ":-(";}
+	
+	if (/(([a-z,A-Z]{4})\s=\s[0-9]+\s[:][-][)]+)|(([a-z,A-Z]{4})+\s=\s[0-9]+\s[+]\s[0-9]+\s[:][-][)]+)|(([a-z,A-Z]{4})\s=\s[0-9]+\s[*]\s[0-9]+\s[:][-][)]+)|(([a-z,A-Z]{4})+\s=\s[0-9]+\s[-]\s[0-9]+\s[:][-][)]+)/i.test(poli3)) 
+        {
+            document.getElementById("dvr3").innerHTML = ":-)";}
+   else 
+         {     document.getElementById("dvr3").innerHTML = ":-(";}
+	
+	if (/(([a-z,A-Z]{4})\s=\s[0-9]+\s[:][-][)]+)|(([a-z,A-Z]{4})+\s=\s[0-9]+\s[+]\s[0-9]+\s[:][-][)]+)|(([a-z,A-Z]{4})\s=\s[0-9]+\s[*]\s[0-9]+\s[:][-][)]+)|(([a-z,A-Z]{4})+\s=\s[0-9]+\s[-]\s[0-9]+\s[:][-][)]+)/i.test(poli4)) 
+        {
+            document.getElementById("dvr4").innerHTML = ":-)";}
+   else 
+         {     document.getElementById("dvr4").innerHTML = ":-(";}
+    
+	if (/(([a-z,A-Z]{4})\s=\s[0-9]+\s[:][-][)]+)|(([a-z,A-Z]{4})+\s=\s[0-9]+\s[+]\s[0-9]+\s[:][-][)]+)|(([a-z,A-Z]{4})\s=\s[0-9]+\s[*]\s[0-9]+\s[:][-][)]+)|(([a-z,A-Z]{4})+\s=\s[0-9]+\s[-]\s[0-9]+\s[:][-][)]+)/i.test(poli5)) 
+        {
+            document.getElementById("dvr5").innerHTML = ":-)";}
+   else 
+         {     document.getElementById("dvr5").innerHTML = ":-(";}
+}
+</script>
+
+</body>
+</html>
